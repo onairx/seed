@@ -21,7 +21,7 @@ export default function Introduction() {
 
     return (
         <section className="w-full h-[250vh] p-4 overflow-clip" ref={theTarget}>
-            <section className="w-full md:h-[100vh] h-[80vh] px-5 flex items-center justify-evenly flex-col text-center sticky top-0">
+            <section className="w-full md:h-[100vh] h-[100vh] md:px-5 px-2 flex items-center justify-evenly flex-col text-center sticky top-0">
                 <HeadingIntro>Introducing Seed</HeadingIntro>
                 <h1 className="lg:text-6xl md:text-[3em] text-[1.5em] font-normal lg:w-[80vw] md:w-full lg:leading-17 md:leading-14
                 lg:mb-23">

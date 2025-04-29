@@ -56,7 +56,7 @@ export default function Features() {
                     }
                 }}>
                 <motion.div
-                    className={`lg:rounded-2xl md:rounded-lg rounded-lg w-fit h-fit px-7 py-3 md:px-4 md:py-2 text-[#0a0a0a] 
+                    className={`lg:rounded-2xl md:rounded-lg rounded-lg w-fit h-fit px-5 py-3 md:px-4 md:py-2 text-[#0a0a0a] 
                     lg:text-2xl md:text-md text-sm bg-[#b9b9b9] cursor-pointer ${ibmPlexMono.className}`}
                 >
                     <span className="font-bold">{key.key}</span>
