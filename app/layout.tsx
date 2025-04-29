@@ -17,7 +17,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   title: "Seed",
-  description: "Software as a service",
+  description: "Seed: A modern, collaborative, and intuitive design tool for creatives",
 };
 
 export default function RootLayout({
