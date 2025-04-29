@@ -4,17 +4,18 @@ import Faqs from "./Faq";
 import { motion } from "framer-motion";
 
 export default function FaqQuestions() {
+    const [openIndex, setOpenIndex] = React.useState<number | null>(null);
     const allFaqs = Faqs.map((faq, index) => {
-        // const [answer, setAnswer] = React.useState(faq.isIt)
-        // function toggleAnswer() {
-        //     setAnswer(!answer)
-        // }
+        const isOpen = openIndex === index;
+        function toggleAnswer() {
+            setOpenIndex(isOpen ? null : index);
+        }
         return (
             <motion.div
                 key={index}
                 className="border text-start lg:w-[50vw] md:w-[70vw] w-full h-fit p-5 rounded-2xl border-[#333333] bg-[#191919] flex 
                 items-center justify-center gap-5 cursor-pointer"
-                // onClick={toggleAnswer}
+                onClick={toggleAnswer}
                 initial={{ opacity: 0.9 }}
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.2 }}
@@ -22,15 +23,16 @@ export default function FaqQuestions() {
                 <div className="w-[90%] flex flex-col gap-2">
                     <h1 className="font-semibold text-md">{faq.question}</h1>
                     <motion.div
-                        initial={{ height: 0, opacity: 0 }}
+                        initial={false}
                         animate={{
-                            height: faq.isIt ? "auto" : 0,
-                            opacity: faq.isIt ? 1 : 0
+                            height: isOpen ? "auto" : 0,
+                            opacity: isOpen ? 1 : 0
                         }}
                         transition={{
                             duration: 0.5,
                             ease: "easeInOut"
                         }}
+                        style={{ overflow: "hidden" }}
                     >
                         <p className="text-md text-[#757575]">
                             {faq.answer}
@@ -39,7 +41,7 @@ export default function FaqQuestions() {
                 </div>
                 <motion.div
                     className="w-5 h-5 cursor-pointer relative flex justify-center items-center p-2"
-                    animate={{ rotate: faq.isIt ? 45 : 0 }}
+                    animate={{ rotate: isOpen ? 45 : 0 }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
                 >
                     <div className="w-4 h-[0.2rem] bg-[#4792f5] rounded-full absolute"></div>
