@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import HeadingIntro from "./HeadingIntro";
 import Faqs from "./Faq";
 import { motion } from "framer-motion";
 
 export default function FaqQuestions() {
     const allFaqs = Faqs.map((faq, index) => {
-        const [answer, setAnswer] = useState(faq.isIt)
+        const [answer, setAnswer] = React.useState(faq.isIt)
         function toggleAnswer() {
             setAnswer(!answer)
         }

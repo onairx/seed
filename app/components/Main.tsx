@@ -31,7 +31,7 @@ export default function Hero() {
             [rightCardPointer.current, { y: 0, x: 0, }, { duration: 0.8, ease: "easeOut" }],
             [rightCardPointer.current, { y: [0, 10, 0], x: -80 }, { duration: 0.8, ease: "easeOut" }],
         ])
-    }, [])
+    }, [null])
     return (
         <main
             className="w-full h-[100vh] bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#023e8a,#0a0a0a_66%)] p-4 overflow-clip"
