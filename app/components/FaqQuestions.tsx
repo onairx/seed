@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import HeadingIntro from "./HeadingIntro";
 import Faqs from "./Faq";
 import { motion } from "framer-motion";
 
 export default function FaqQuestions() {
     const allFaqs = Faqs.map((faq, index) => {
-        const [answer, setAnswer] = React.useState(faq.isIt)
+        const [answer, setAnswer] = useState(faq.isIt)
         function toggleAnswer() {
             setAnswer(!answer)
         }
@@ -54,7 +54,7 @@ export default function FaqQuestions() {
             md:gap-15 gap-7">
             <HeadingIntro>FAQ</HeadingIntro>
             <div className="flex flex-col items-center justify-center gap-10 w-full">
-                <h1 className="lg:text-6xl md:text-[3em] text-[1.5em]">Questions? We've got {" "} <br />
+                <h1 className="lg:text-6xl md:text-[3em] text-[1.5em]">Questions? We&apos;ve got {" "} <br />
                     <span className="bg-gradient-to-r from-[#0061FF] via-[#30A8FF] to-[#60EFFF] text-transparent bg-clip-text">
                         answers
                     </span>

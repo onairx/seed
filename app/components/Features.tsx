@@ -105,7 +105,7 @@ export default function Features() {
                 >
                     <div className="w-full text-center">
                         <h1 className="md:text-2xl lg:text-4xl text-2xl font-bold text-[#4d4d4d]">
-                            We've achived{" "}
+                            We&apos;ve achived{" "}
                             <span className="bg-gradient-to-r from-[#ff0f7b] to-[#f89b29] text-transparent bg-clip-text">
                                 incredible
                             </span>

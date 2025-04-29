@@ -8,7 +8,6 @@ import Features from "./components/Features"
 import Integration from "./components/Integration"
 import FaqQuestions from "./components/FaqQuestions"
 import Footer from "./components/Footer"
-import Test from "./components/test"
 import Lenis from "lenis"
 
 export default function Home() {
@@ -30,7 +29,6 @@ export default function Home() {
       <main className="w-full h-auto">
         <Main />
         <BrandLogo />
-        {/* <Test /> */}
         <Introduction />
         <Features />
         <Integration />

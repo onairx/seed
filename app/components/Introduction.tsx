@@ -41,7 +41,7 @@ export default function Introduction() {
                         }
                     </span> <br className="hidden lg:block" />
                     <span className="bg-gradient-to-r from-[#0061FF] via-[#30A8FF] to-[#60EFFF] text-transparent bg-clip-text">
-                        That's why we created Seeds.
+                        That&apos;s why we created Seeds.
                     </span>
                 </h1>
             </section>
